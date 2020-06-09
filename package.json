@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ffejcaplan/Employee_Summary#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "inquirer": "^7.1.0"
   }
 }
