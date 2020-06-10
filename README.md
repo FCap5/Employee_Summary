@@ -48,3 +48,5 @@ Using the code provdided made it pretty easy to write properly coded HTML to the
 Once I had that finished, I just needed to go through my inquirer prompts to make sure that all the answers provided were the appropriate basic data types. I had to turn everything into functions so that I could call the prompts inside my if statements, but it worked out nicely. I could probably touch it up a bit, but I think it's pretty solid.
 
 ## And Here's the Final Product!
+
+[![Click Through of App](https://youtu.be/Aua6pFVTchg)](https://youtu.be/Aua6pFVTchg)
