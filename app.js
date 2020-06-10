@@ -60,8 +60,8 @@ const addEmployees = () => {
         addEmployees();
       });
     } else {
-      //return htmlRender.render(answersArray);
-      console.log(answersArray);
+      const newFile = htmlRender.render(answersArray);
+      fs.writeFileSync(outputPath, newFile);
     }
   });
 };
@@ -103,7 +103,7 @@ inquirer.prompt(managerQuestions).then((answers) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./templates/main.html"));
+  res.sendFile(path.join(__dirname, "./output/team.html"));
 });
 
 //if x role is selected
