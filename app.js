@@ -1,8 +1,10 @@
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const express = require("express");
 const app = express();
 const path = require("path");
-const merge = require("lodash.merge");
 const fs = require("fs");
 const htmlRender = require("./lib/htmlRender");
 
@@ -44,7 +46,7 @@ const addEmployees = () => {
         addEmployees();
       });
     } else {
-      htmlRender.render(answersArray);
+      return htmlRender.render(answersArray);
     }
   });
 };
