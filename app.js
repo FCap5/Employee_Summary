@@ -55,7 +55,6 @@ const addEmployees = () => {
               answers2.gitHub
             );
             answersArray.push(newEmployee);
-            console.log(answersArray);
             addEmployees();
           }
         });
@@ -80,7 +79,6 @@ const addEmployees = () => {
               answers2.school
             );
             answersArray.push(newEmployee);
-            console.log(answersArray);
             addEmployees();
           }
         });
@@ -95,25 +93,29 @@ const addEmployees = () => {
 
 //object Engineer questions
 const engineerQuestions = [
-  { type: "input", name: "name", message: "Name" },
-  { type: "number", name: "id", message: "ID:" },
-  { type: "input", name: "email", message: "Email" },
-  { type: "input", name: "gitHub", message: "GitHub Account" },
+  { type: "input", name: "name", message: "Enter Engineer Name:" },
+  { type: "number", name: "id", message: "Enter Engineer ID Number:" },
+  { type: "input", name: "email", message: "Enter Engineer Email:" },
+  { type: "input", name: "gitHub", message: "Enter Engineer GitHub Account:" },
 ];
 //object Manager questions
 const managerQuestions = [
-  { type: "input", name: "name", message: "Name" },
-  { type: "number", name: "id", message: "ID:" },
-  { type: "input", name: "email", message: "Email" },
-  { type: "number", name: "officeNumber", message: "Office Number" },
+  { type: "input", name: "name", message: "Enter Manager Name:" },
+  { type: "number", name: "id", message: "Enter Manager ID Number:" },
+  { type: "input", name: "email", message: "Enter Manager Email:" },
+  {
+    type: "number",
+    name: "officeNumber",
+    message: "Enter Manager Office Number:",
+  },
 ];
 
 //object intern questions
 const internQuestions = [
-  { type: "input", name: "name", message: "Name" },
-  { type: "number", name: "id", message: "ID:" },
-  { type: "input", name: "email", message: "Email" },
-  { type: "input", name: "school", message: "School" },
+  { type: "input", name: "name", message: "Enter Intern Name:" },
+  { type: "number", name: "id", message: "Enter Intern ID Number:" },
+  { type: "input", name: "email", message: "Enter Intern Email:" },
+  { type: "input", name: "school", message: "Enter Intern School Name:" },
 ];
 const answersArray = [];
 //inquirer select role
