@@ -49,4 +49,4 @@ Once I had that finished, I just needed to go through my inquirer prompts to mak
 
 ## And Here's the Final Product!
 
-[![Click Through of App](https://youtu.be/Aua6pFVTchg)](https://youtu.be/Aua6pFVTchg)
+[![Click Through of App](photo_assets/photo.png)](https://youtu.be/Aua6pFVTchg)
