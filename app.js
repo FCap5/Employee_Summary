@@ -35,18 +35,33 @@ const addEmployees = () => {
   inquirer.prompt(selectRole).then((response) => {
     if (response.role == "Engineer") {
       inquirer.prompt(engineerQuestions).then((answers2) => {
-        answersArray.push(answers2);
+        const newEmployee = new Engineer(
+          answers2.name,
+          answers2.id,
+          answers2.email,
+          response.role,
+          answers2.gitHub
+        );
+        answersArray.push(newEmployee);
         console.log(answersArray);
         addEmployees();
       });
     } else if (response.role == "Intern") {
       inquirer.prompt(internQuestions).then((answers2) => {
-        answersArray.push(answers2);
+        const newEmployee = new Intern(
+          answers2.name,
+          answers2.id,
+          answers2.email,
+          response.role,
+          answers2.school
+        );
+        answersArray.push(newEmployee);
         console.log(answersArray);
         addEmployees();
       });
     } else {
-      return htmlRender.render(answersArray);
+      //return htmlRender.render(answersArray);
+      console.log(answersArray);
     }
   });
 };
@@ -56,7 +71,7 @@ const engineerQuestions = [
   { type: "input", name: "name", message: "Name" },
   { type: "input", name: "id", message: "ID:" },
   { type: "input", name: "email", message: "Email" },
-  { type: "input", name: "github", message: "GitHub Account" },
+  { type: "input", name: "gitHub", message: "GitHub Account" },
 ];
 //object Manager questions
 const managerQuestions = [
@@ -76,7 +91,14 @@ const internQuestions = [
 const answersArray = [];
 //inquirer select role
 inquirer.prompt(managerQuestions).then((answers) => {
-  answersArray.push(answers);
+  const newEmployee = new Manager(
+    answers.name,
+    answers.id,
+    answers.email,
+    "Manager",
+    answers.officeNumber
+  );
+  answersArray.push(newEmployee);
   addEmployees();
 });
 
