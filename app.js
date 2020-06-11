@@ -8,6 +8,7 @@ const path = require("path");
 const fs = require("fs");
 const htmlRender = require("./lib/htmlRender");
 
+//path to output folder/team.html
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
@@ -18,6 +19,9 @@ app.use(express.json());
 
 app.listen(PORT, () => {});
 
+//array of objects to hold answers
+const answersArray = [];
+//for role selection
 const selectRole = [
   {
     type: "list",
@@ -30,9 +34,39 @@ const selectRole = [
     ],
   },
 ];
+//array of objects Manager questions
+const managerQuestions = [
+  { type: "input", name: "name", message: "Enter Manager Name:" },
+  { type: "number", name: "id", message: "Enter Manager ID Number:" },
+  { type: "input", name: "email", message: "Enter Manager Email:" },
+  {
+    type: "number",
+    name: "officeNumber",
+    message: "Enter Manager Office Number:",
+  },
+];
 
+//array of objects Engineer questions
+const engineerQuestions = [
+  { type: "input", name: "name", message: "Enter Engineer Name:" },
+  { type: "number", name: "id", message: "Enter Engineer ID Number:" },
+  { type: "input", name: "email", message: "Enter Engineer Email:" },
+  { type: "input", name: "gitHub", message: "Enter Engineer GitHub Account:" },
+];
+
+//array of objects intern questions
+const internQuestions = [
+  { type: "input", name: "name", message: "Enter Intern Name:" },
+  { type: "number", name: "id", message: "Enter Intern ID Number:" },
+  { type: "input", name: "email", message: "Enter Intern Email:" },
+  { type: "input", name: "school", message: "Enter Intern School Name:" },
+];
+
+//function to add additional employees after manager enters info
 const addEmployees = () => {
+  //select role
   inquirer.prompt(selectRole).then((response) => {
+    //verify information provided matches information needed
     const addNonManager = () => {
       if (response.role == "Engineer") {
         inquirer.prompt(engineerQuestions).then((answers2) => {
@@ -91,33 +125,6 @@ const addEmployees = () => {
   });
 };
 
-//object Engineer questions
-const engineerQuestions = [
-  { type: "input", name: "name", message: "Enter Engineer Name:" },
-  { type: "number", name: "id", message: "Enter Engineer ID Number:" },
-  { type: "input", name: "email", message: "Enter Engineer Email:" },
-  { type: "input", name: "gitHub", message: "Enter Engineer GitHub Account:" },
-];
-//object Manager questions
-const managerQuestions = [
-  { type: "input", name: "name", message: "Enter Manager Name:" },
-  { type: "number", name: "id", message: "Enter Manager ID Number:" },
-  { type: "input", name: "email", message: "Enter Manager Email:" },
-  {
-    type: "number",
-    name: "officeNumber",
-    message: "Enter Manager Office Number:",
-  },
-];
-
-//object intern questions
-const internQuestions = [
-  { type: "input", name: "name", message: "Enter Intern Name:" },
-  { type: "number", name: "id", message: "Enter Intern ID Number:" },
-  { type: "input", name: "email", message: "Enter Intern Email:" },
-  { type: "input", name: "school", message: "Enter Intern School Name:" },
-];
-const answersArray = [];
 //inquirer select role
 const askManager = () => {
   inquirer.prompt(managerQuestions).then((answers) => {
@@ -145,9 +152,7 @@ const askManager = () => {
 };
 askManager();
 
+//when url is visited, open output.html
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./output/team.html"));
 });
-
-//if x role is selected
-//inquirer that object of questions
