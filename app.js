@@ -12,7 +12,7 @@ const htmlRender = require("./lib/htmlRender");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const PORT = 8080;
+const PORT = 8080 || process.env.PORT;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

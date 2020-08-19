@@ -1,16 +1,12 @@
 # Employee_Summary
 
-## Figuring out the Assignment
-
-It was tricky for me initially to figure out what this asignment was asking me to do. I think one of my hiccups is that in class we have already begun to build out some of the functionality that was provided. As such, I was kind of anticipating that I would be building out a lot more of the functionaltiy for this assignment than we ended up needing to build. Once, I figured out what was actually going on, things went a lot faster.
-
 ## Start with what you know
 
-Inquirer is pretty easy for me. It's a lot like writing plain javascript, so I started with that. I was able to get a pretty basic build out of the prompts. However, I did end up having to go back and flesh it out as I got a better sense of what was going on.
+Of the Node packages we have worked with to date, Inquirer is the one I've had the most experience with, and therefore am pretty comfortable working with Inquirer. It reminds me of writing plain javascript. As such I started with Inquirer. I was able to get a pretty basic build out of the prompts without too many issues. However, I did end up having to go back and flesh it out as I got a better sense of the full scope of the assignment.
 
 ## Embracing the confusion
 
-My first thought was, why don't I just build this app all myself. But, when I started down that road, I realized that I still had a lot of backend to bone up on before I could get that done in the timeline provided. So I went back to the code provided and tried to sift through it so I could get a sense of what I was actually supposed to be doing. I think my big hiccup was forgetting about the functions you can add to a class. If I had remembered that earlier, this would have probably been easier for me to conceptualize. I was also a bit hung up on the the class functions. I was anticipating them to be so simple.
+My first thought when I looked at this assignment" was, why don't I just build this app all myself?" But, when I started down that road, I realized that I still had a lot of backend to bone up on before I could get that done in the timeline provided. So, I went back to the code provided and tried to sift through it to ensure I had a complete understanding of the requirements for this assignment. I think my big hiccup was forgetting about the functions you can add to a class. If I had remembered that earlier, this would have probably been easier for me to conceptualize. I was also a bit hung up on the the class functions.
 
 ## Starting with Testing
 
