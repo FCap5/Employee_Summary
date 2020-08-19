@@ -8,7 +8,7 @@ Of the Node packages we have worked with to date, Inquirer is the one I've had t
 
 My first thought when I looked at this assignment" was, why don't I just build this app all myself?" But, when I started down that road, I realized that I still had a lot of backend to bone up on before I could get that done in the timeline provided. So, I went back to the code provided and tried to sift through it to ensure I had a complete understanding of the requirements for this assignment. I think my big hiccup was forgetting about the functions you can add to a class. If I had remembered that earlier, this would have probably been easier for me to conceptualize. I was also a bit hung up on the the class functions.
 
-## Starting with Testing
+## Testing
 
 Once I finally got around to building the classes, I realized that the testing code provided would be pretty handy. The code provided didn't quite fit the parameters needed to test the classes I was creating. The major issue was that they didn't have all the arguements.
 
