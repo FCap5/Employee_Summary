@@ -1,5 +1,5 @@
 # Employee_Summary
-
+Track employees, managers, and departments with this CLI.
 ## Start with what you know
 
 Of the Node packages we have worked with to date, Inquirer is the one I've had the most experience with, and therefore am pretty comfortable working with Inquirer. It reminds me of writing plain javascript. As such I started with Inquirer. I was able to get a pretty basic build out of the prompts without too many issues. However, I did end up having to go back and flesh it out as I got a better sense of the full scope of the assignment.
